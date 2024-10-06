@@ -2,11 +2,15 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "dev": "vite",
+        "dev": "concurrently --prefix \"[{name}]\" --names \"serve,queue,vite\" \"php artisan serve\" \"php artisan queue:work\" \"npm run vite\" ",
+        "serve": "php artisan serve",
+        "queue": "php artisan queue:work",
+        "vite": "vite",
         "build": "vite build"
     },
     "devDependencies": {
         "axios": "^1.7.4",
+        "concurrently": "^9.0.1",
         "laravel-vite-plugin": "^1.0",
         "vite": "^5.0"
     }
