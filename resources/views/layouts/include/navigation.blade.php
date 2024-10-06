@@ -1,25 +1,4 @@
 <header class="antialiased fixed top-0 z-50 start-0 w-full bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
-  {{-- <div id="alert-1" class="flex items-center p-4 mb-4 text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400" role="alert">
-    <div class="items-center md:flex">
-      <p class="text-sm font-medium text-gray-900 md:my-0 dark:text-white">
-        <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 hidden md:inline">New</span>
-        We have launched Flowbite Blocks featuring over 450+ website sections!
-        <a href="/blocks/" class="inline-flex items-center ml-2 text-sm font-medium text-blue-600 md:ml-2 dark:text-blue-500 hover:underline">
-          Check it out
-          <svg class="w-3 h-3 ml-1.5 text-blue-600 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"></path>
-          </svg>
-        </a>
-      </p>
-    </div>
-    <button type="button" class="ms-auto -mx-1.5 -my-1.5 bg-blue-50 text-blue-500 rounded-lg focus:ring-2 focus:ring-blue-400 p-1.5 hover:bg-blue-200 inline-flex items-center justify-center h-8 w-8 dark:bg-gray-800 dark:text-blue-400 dark:hover:bg-gray-700" data-dismiss-target="#alert-1" aria-label="Close">
-      <span class="sr-only">Close</span>
-      <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
-      </svg>
-    </button>
-  </div> --}}
-
   <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2 dark:bg-gray-800">
     <div class="flex flex-wrap justify-between items-center">
       <div class="flex justify-start items-center">
@@ -31,25 +10,25 @@
           </svg>
         </button>
 
-        <a href="/" class="flex mr-4">
-          <img src="https://flowbite.s3.amazonaws.com/logo.svg" class="mr-3 h-8" alt="FlowBite Logo" />
-          <span class="hidden lg:flex self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+        <a href="/dashboard" class="flex mr-4">
+          <img src="logo.svg" class="mr-3 h-8" alt="{{ config('app.name', 'Laravel') }} Logo" />
+          <span class="hidden lg:flex self-center text-2xl font-semibold whitespace-nowrap dark:text-white">{{ config('app.name', 'Laravel') }}</span>
         </a>
-
       </div>
+
       <div class="flex items-center lg:order-2 gap-1">
-        {{-- <form action="#" method="GET" class="hidden lg:block lg:pl-2">
-          <label for="topbar-search" class="sr-only">Search</label>
-          <div class="relative mt-1 lg:w-86">
-            <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-              <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
-              </svg>
-            </div>
-            <input type="text" name="email" id="topbar-search" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-9 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Search">
-          </div>
-        </form> --}}
-        <button id="toggleSidebarMobileSearch" type="button" class="p-2 text-gray-500 rounded-lg lg:hidden hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+        <div class="bg-white dark:bg-slate-900 relative pointer-events-auto">
+          <button type="button" class="hidden w-full lg:flex items-center text-sm leading-6 text-slate-400 rounded-md ring-1 ring-slate-900/10 shadow-sm py-1.5 pl-2 pr-3 hover:ring-slate-300 dark:bg-slate-800 dark:highlight-white/5 dark:hover:bg-slate-700">
+            <svg width="24" height="24" fill="none" aria-hidden="true" class="mr-3 flex-none">
+              <path d="m19 19-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              <circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></circle>
+            </svg>
+            Search...
+            <span class="ml-auto pl-3 flex-none text-xs font-semibold">Ctrl K</span>
+          </button>
+        </div>
+
+        <button type="button" class="p-2 text-gray-500 rounded-lg lg:hidden hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
           <span class="sr-only">Search</span>
           <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
@@ -238,10 +217,10 @@
             <path d="M10 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0-11a1 1 0 0 0 1-1V1a1 1 0 0 0-2 0v2a1 1 0 0 0 1 1Zm0 12a1 1 0 0 0-1 1v2a1 1 0 1 0 2 0v-2a1 1 0 0 0-1-1ZM4.343 5.757a1 1 0 0 0 1.414-1.414L4.343 2.929a1 1 0 0 0-1.414 1.414l1.414 1.414Zm11.314 8.486a1 1 0 0 0-1.414 1.414l1.414 1.414a1 1 0 0 0 1.414-1.414l-1.414-1.414ZM4 10a1 1 0 0 0-1-1H1a1 1 0 0 0 0 2h2a1 1 0 0 0 1-1Zm15-1h-2a1 1 0 1 0 0 2h2a1 1 0 0 0 0-2ZM4.343 14.243l-1.414 1.414a1 1 0 1 0 1.414 1.414l1.414-1.414a1 1 0 0 0-1.414-1.414ZM14.95 6.05a1 1 0 0 0 .707-.293l1.414-1.414a1 1 0 1 0-1.414-1.414l-1.414 1.414a1 1 0 0 0 .707 1.707Z">
             </path>
           </svg>
-          <span class="sr-only">Toggle dark mode</span>
+          <span class="sr-only">Toggle mode</span>
         </button>
         <div id="tooltip-toggle" role="tooltip" class="absolute z-10 inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm tooltip opacity-0 invisible" style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate(628px, -60px);" data-popper-placement="top">
-          Toggle dark mode
+          Toggle mode
           <div class="tooltip-arrow" data-popper-arrow="" style="position: absolute; left: 0px; transform: translate(69px, 0px);"></div>
         </div>
 
@@ -377,103 +356,3 @@
     </div>
   </nav>
 </header>
-
-
-{{-- <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
-    <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
-            <div class="flex">
-                <!-- Logo -->
-                <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
-<x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
-</a>
-</div>
-
-<!-- Navigation Links -->
-<div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-  <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-    {{ __('Dashboard') }}
-  </x-nav-link>
-</div>
-</div>
-
-<!-- Settings Dropdown -->
-<div class="hidden sm:flex sm:items-center sm:ms-6">
-  <x-dropdown align="right" width="48">
-    <x-slot name="trigger">
-      <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
-        <div>{{ Auth::user()->name }}</div>
-
-        <div class="ms-1">
-          <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-          </svg>
-        </div>
-      </button>
-    </x-slot>
-
-    <x-slot name="content">
-      <x-dropdown-link :href="route('profile.edit')">
-        {{ __('Profile') }}
-      </x-dropdown-link>
-
-      <!-- Authentication -->
-      <form method="POST" action="{{ route('logout') }}">
-        @csrf
-
-        <x-dropdown-link :href="route('logout')" onclick="event.preventDefault();
-                                                this.closest('form').submit();">
-          {{ __('Log Out') }}
-        </x-dropdown-link>
-      </form>
-    </x-slot>
-  </x-dropdown>
-</div>
-
-<!-- Hamburger -->
-<div class="-me-2 flex items-center sm:hidden">
-  <button @click="open = ! open" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
-    <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-      <path :class="{'hidden': open, 'inline-flex': ! open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-      <path :class="{'hidden': ! open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-    </svg>
-  </button>
-</div>
-</div>
-</div>
-
-<!-- Responsive Navigation Menu -->
-<div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
-  <div class="pt-2 pb-3 space-y-1">
-    <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-      {{ __('Dashboard') }}
-    </x-responsive-nav-link>
-  </div>
-
-  <!-- Responsive Settings Options -->
-  <div class="pt-4 pb-1 border-t border-gray-200">
-    <div class="px-4">
-      <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
-      <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
-    </div>
-
-    <div class="mt-3 space-y-1">
-      <x-responsive-nav-link :href="route('profile.edit')">
-        {{ __('Profile') }}
-      </x-responsive-nav-link>
-
-      <!-- Authentication -->
-      <form method="POST" action="{{ route('logout') }}">
-        @csrf
-
-        <x-responsive-nav-link :href="route('logout')" onclick="event.preventDefault();
-                                        this.closest('form').submit();">
-          {{ __('Log Out') }}
-        </x-responsive-nav-link>
-      </form>
-    </div>
-  </div>
-</div>
-</nav> --}}

@@ -1,10 +1,5 @@
 <x-app-layout>
   <x-slot name="header">
-    {{-- <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-      {{ __('Dashboard') }}
-    </h2> --}}
-
-
     <nav class="flex p-2 aria-label=" Breadcrumb">
       <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
         <li class="inline-flex items-center">
